@@ -1,0 +1,50 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop:inherit;
+    font-family: 'Courier New', serif;
+    
+
+    word-spacing: -5px; /* Verkleinert den Abstand zwischen Wörtern */
+
+}
+
+  
+:root {
+    /* Moderne Farbpalette für Softsolution */
+    --primary-color: #0A5C7A;        /* Deep Teal Blue */
+    --secondary-color: #00A8CC;      /* Bright Cyan */
+    --accent-color: #00D9FF;         /* Vibrant Cyan */
+    --background-color: #F0F7FF;     /* Light Blue Background */
+    --highlight-color: #FF6B35;      /* Warm Orange Accent */
+    --success-color: #06A77D;        /* Green */
+}
+}
+
+q {
+    font-size: 30px;
+    width: 1px;
+    color: var(--secondary-color);
+}
+
+
+.section-1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    height: 100vh; 
+    background-color: var(--background-color);
+    
+}
+
+.intro {
+    text-justify: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--primary-color);
+
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Login | Softsolution - The Best Website-Solution GmbH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/design.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.login-container {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(135deg, #0A5C7A 0%, #00A8CC 100%);
+				padding: 2rem;
+			}
+
+			.login-box {
+				background: white;
+				border-radius: 12px;
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+				padding: 3rem;
+				max-width: 520px;
+				width: 100%;
+				margin: 40px auto;
+			}
+
+			.login-box h1 {
+				color: #0A5C7A;
+				text-align: center;
+				margin-bottom: 0.5rem;
+				font-size: 2rem;
+			}
+
+			.login-box .subtitle {
+				text-align: center;
+				color: #666;
+				margin-bottom: 2rem;
+				font-size: 0.95rem;
+			}
+
+			.form-group {
+				margin-bottom: 1.5rem;
+			}
+
+			.form-group label {
+				display: block;
+				color: #0A5C7A;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				font-size: 0.95rem;
+			}
+
+			.form-group input[type="email"],
+			.form-group input[type="text"],
+			.form-group input[type="password"] {
+				width: 100%;
+				padding: 0.75rem;
+				border: 2px solid #e0e0e0;
+				border-radius: 6px;
+				font-size: 1rem;
+				transition: border-color 0.3s ease;
+				box-sizing: border-box;
+				font-family: inherit;
+			}
+
+			.form-group input[type="email"]:focus,
+			.form-group input[type="text"]:focus,
+			.form-group input[type="password"]:focus {
+				outline: none;
+				border-color: #00A8CC;
+				box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.1);
+			}
+
+			.form-group.checkbox {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1rem;
+			}
+
+			.form-group.checkbox input[type="checkbox"] {
+				width: 18px;
+				height: 18px;
+				margin-right: 0.75rem;
+				cursor: pointer;
+				accent-color: #00A8CC;
+			}
+
+			.form-group.checkbox label {
+				margin: 0;
+				font-weight: normal;
+				cursor: pointer;
+				color: #333;
+			}
+
+			.forgot-password {
+				text-align: right;
+				margin-bottom: 1.5rem;
+			}
+
+			.forgot-password a {
+				color: #00A8CC;
+				text-decoration: none;
+				font-size: 0.9rem;
+				font-weight: 500;
+				transition: color 0.3s ease;
+			}
+
+			.forgot-password a:hover {
+				color: #0A5C7A;
+				text-decoration: underline;
+			}
+
+			.login-button {
+				width: 100%;
+				padding: 0.85rem;
+				background: linear-gradient(135deg, #0A5C7A 0%, #00A8CC 100%);
+				color: white;
+				border: none;
+				border-radius: 6px;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.login-button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(0, 168, 204, 0.4);
+			}
+
+			.login-button:active {
+				transform: translateY(0);
+			}
+
+			.signup-link {
+				text-align: center;
+				margin-top: 1.5rem;
+				color: #666;
+				font-size: 0.95rem;
+			}
+
+			.signup-link a {
+				color: #00A8CC;
+				text-decoration: none;
+				font-weight: 600;
+				transition: color 0.3s ease;
+			}
+
+			.signup-link a:hover {
+				color: #0A5C7A;
+				text-decoration: underline;
+			}
+
+			.divider {
+				text-align: center;
+				margin: 1.5rem 0;
+				color: #ccc;
+				font-weight: 300;
+			}
+
+			.social-login {
+				display: flex;
+				gap: 0.75rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.social-button {
+				flex: 1;
+				padding: 0.85rem;
+				border: 2px solid #e0e0e0;
+				background: white;
+				border-radius: 6px;
+				cursor: pointer;
+				font-size: 1.4rem;
+				transition: all 0.3s ease;
+				color: #00A8CC;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.social-button:hover {
+				border-color: #00A8CC;
+				color: white;
+				background: #00A8CC;
+				transform: translateY(-2px);
+				box-shadow: 0 5px 15px rgba(0, 168, 204, 0.3);
+			}
+
+			@media (max-width: 600px) {
+				.login-box {
+					padding: 2rem;
+				}
+
+				.login-box h1 {
+					font-size: 1.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Softsolution</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Projekte</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Login Section -->
+				<section class="login-container">
+					<div class="login-box">
+						<h1>Login</h1>
+						<p class="subtitle">Willkommen zurück bei Softsolution</p>
+
+						<form method="POST" action="#">
+							<!-- Social Login -->
+							<div class="social-login">
+								<button type="button" class="social-button" title="Mit Google anmelden">
+									<i class="fab fa-google"></i>
+								</button>
+								<button type="button" class="social-button" title="Mit GitHub anmelden">
+									<i class="fab fa-github"></i>
+								</button>
+								<button type="button" class="social-button" title="Mit LinkedIn anmelden">
+									<i class="fab fa-linkedin"></i>
+								</button>
+							</div>
+
+							<div class="divider">— oder —</div>
+
+							<!-- Email Input -->
+							<div class="form-group">
+								<label for="email">E-Mail  Adresse</label>
+								<input type="email" id="email" name="email" placeholder="beispiel@softsolution.de" required>
+							</div>
+
+							<!-- Password Input -->
+							<div class="form-group">
+								<label for="password">Passwort</label>
+								<input type="password" id="password" name="password" placeholder="••••••••" required>
+							</div>
+
+							<!-- Remember Me Checkbox -->
+							<div class="form-group checkbox">
+								<input type="checkbox" id="remember" name="remember">
+								<label for="remember">Angemeldet  bleiben</label>
+							</div>
+
+							<!-- Forgot Password Link -->
+							<div class="forgot-password">
+								<a href="#">Passwort  vergessen?</a>
+							</div>
+
+							<!-- Login Button -->
+							<button type="submit" class="login-button">Anmelden</button>
+
+							<!-- Sign Up Link -->
+							<div class="signup-link">
+								Noch kein Konto? <a href="#">Jetzt  registrieren</a>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>&copy; The Best Website-Solution GmbH - Softsolution Projekt Gruppe 15. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
